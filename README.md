@@ -10,7 +10,7 @@ This is a demo application developed on Node.js which serves two endpoints ```/a
 
 1. Clone this repository to your local machine
 2. Navigate to the project directory in your terminal
-3. Run npm install to install all the required dependencies
+3. Run ```npm install``` to install all the required dependencies
 4. Create a ```.env``` file in the root directory of the project and add the following:
 
 ```PORT=<port_number>
