@@ -43,13 +43,7 @@ GET http://localhost/api/application
 }
 ```
 
-Second endpoint is:
-
-```
-GET http://localhost/api/application/:applicationId
-``` 
-- Returns a single application with the specified ```applicationId``` from the apps collection in MongoDB.
-Applications with ```enabled = true``` and ```deleted = false``` status will be included in the response. The response for GET ```http://localhost/api/application``` will include the following attributes:
+The response for ```GET http://localhost/api/application```will contain an array of documents under the ```items``` attribute, sorted in descending order based on points. Each document will have the following attributes:
 ```
  - _id (e.g. "582457b6016eaa9d3aee09fb")
  - type (type of application)
@@ -58,7 +52,14 @@ Applications with ```enabled = true``` and ```deleted = false``` status will be 
  - totalPoints (sum of all points from points collection for this application \_id)
 ```
 
-The items are sorted in descending order based on points.
+
+Second endpoint is:
+
+```
+GET http://localhost/api/application/:applicationId
+``` 
+- Returns a single application with the specified ```applicationId``` from the apps collection in MongoDB.
+Applications with ```enabled = true``` and ```deleted = false``` status will be included in the response. 
 
 In case of an error (e.g. db failure), a JSON document will be returned with an error field containing the error description with the correct response code in the following format:
 ```
