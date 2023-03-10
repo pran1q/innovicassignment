@@ -22,7 +22,8 @@ After installation, run the following command to start the server:
 
 This will start the server at ```http://localhost:<port_number>```. You can use the following endpoints to retrieve data from the server:
 
-```GET http://localhost/api/application``` - Returns all applications from the apps collection in MongoDB.
+```
+GET http://localhost/api/application``` - Returns all applications from the apps collection in MongoDB.
 ```GET http://localhost/api/application/:applicationId``` - Returns a single application with the specified applicationId from the apps collection in MongoDB.
 Applications with enabled=true and deleted=false status will be included in the response. The response for GET ```http://localhost/api/application``` will include the following attributes:
 
