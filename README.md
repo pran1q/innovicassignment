@@ -31,19 +31,28 @@ This will start the server at ```http://localhost:<port_number>```. You can use 
 ```
 GET http://localhost/api/application
 ``` 
-- Returns all applications from the apps collection in MongoDB.
+- Returns all applications from the apps collection in MongoDB. Response is in JSON format with status code 200:
+```
+{
+  status:true,
+  total: <total_number_of_applications>,
+  remaining: <time_remaining_since_current_hour_end(e.g"42")>
+  items: <list_of_application_items>
+}
+```
 
 ```
 GET http://localhost/api/application/:applicationId
 ``` 
 - Returns a single application with the specified applicationId from the apps collection in MongoDB.
-Applications with enabled=true and deleted=false status will be included in the response. The response for GET ```http://localhost/api/application``` will include the following attributes:
-
-\_id (e.g. "582457b6016eaa9d3aee09fb")
-type (type of application)
-name (name of application)
-platform (from meta.platform)
-totalPoints (sum of all points from points collection for this application \_id)
+Applications with ```enabled = true``` and ```deleted = false``` status will be included in the response. The response for GET ```http://localhost/api/application``` will include the following attributes:
+```
+ - _id (e.g. "582457b6016eaa9d3aee09fb")
+ - type (type of application)
+ - name (name of application)
+ - platform (from meta.platform)
+ - totalPoints (sum of all points from points collection for this application \_id)
+```
 The items are sorted in descending order based on points. The response will be in JSON format with status code 200.
 
 In case of an error (e.g. db failure), a JSON document will be returned with an error field containing the error description with the correct response code in the following format:
