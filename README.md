@@ -10,7 +10,8 @@ This is a demo application developed on Node.js which serves two endpoints ```/a
 4.Create a .env file in the root directory of the project and add the following:
 
 ```PORT=<port_number>
-MONGO_CONNECTION_STRING=<mongo_connection_string>```
+MONGO_CONNECTION_STRING=<mongo_connection_string>
+```
 
 3.Replace ```<port_number>``` with your desired port number and ```<mongo_connection_string>``` with the connection string for your MongoDB database.
 
