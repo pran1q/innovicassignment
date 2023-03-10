@@ -43,7 +43,7 @@ GET http://localhost/api/application
 }
 ```
 
-The response for ```GET http://localhost/api/application```will contain an array of documents under the ```items``` attribute, sorted in descending order based on points. Each document will have the following attributes:
+The response for ```GET http://localhost/api/application``` will contain an array of documents under the ```items``` attribute, sorted in descending order based on points. Each document will have the following attributes:
 ```
  - _id (e.g. "582457b6016eaa9d3aee09fb")
  - type (type of application)
