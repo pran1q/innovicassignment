@@ -41,6 +41,8 @@ GET http://localhost/api/application
 }
 ```
 
+Second endpoint is:
+
 ```
 GET http://localhost/api/application/:applicationId
 ``` 
@@ -53,19 +55,20 @@ Applications with ```enabled = true``` and ```deleted = false``` status will be 
  - platform (from meta.platform)
  - totalPoints (sum of all points from points collection for this application \_id)
 ```
-The items are sorted in descending order based on points. The response will be in JSON format with status code 200.
+
+The items are sorted in descending order based on points.
 
 In case of an error (e.g. db failure), a JSON document will be returned with an error field containing the error description with the correct response code in the following format:
 ```
 {
-status: false,
-error: <error_message>
+  status: false,
+  error: <error_message>
 }
 ```
 ## Database Dump
 
-In root directory I will provide dummy data that I am using in JSON format.
-After importing the dump into the innovic database, both collections should appear.
+In root directory I provided dummy data that I am using in JSON format.
+After importing the data dump into the ```innovic``` database, both collections should appear.
 
 ## Conclusion
 
