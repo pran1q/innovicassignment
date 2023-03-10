@@ -3,7 +3,7 @@
 This is a demo application developed on Node.js which serves two endpoints ```/api/application``` and ```/api/application/:applicationId```. The application is a REST API that retrieves data from MongoDB data sources. The following technologies are used to develop this application: 
 - Node.js v18.14.0 
 - Express.js for the REST API server 
-- Mongodb client modules to read data from DBs 
+- MongoDB client modules to read data from DBs 
 - dotenv to hide sensitive information like ```PORT``` and ```MONGO_CONNECTION_STRING```.
 
 ## Installation
@@ -11,7 +11,7 @@ This is a demo application developed on Node.js which serves two endpoints ```/a
 1.Clone this repository to your local machine
 2.Navigate to the project directory in your terminal
 3.Run npm install to install all the required dependencies
-4.Create a .env file in the root directory of the project and add the following:
+4.Create a ```.env``` file in the root directory of the project and add the following:
 
 ```PORT=<port_number>
 MONGO_CONNECTION_STRING=<mongo_connection_string>
