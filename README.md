@@ -1,6 +1,9 @@
 # INNOVIC Node.js assignment application
 
-This is a demo application developed on Node.js which serves two endpoints ```/api/application``` and ```/api/application/:applicationId```. The application is a REST API that retrieves data from MongoDB data sources. The following technologies are used to develop this application: - Node.js v18.14.0 - Express.js for the REST API server - Mongodb client modules to read data from DBs - dotenv to hide sensitive information like PORT and MONGO_CONNECTION_STRING.
+This is a demo application developed on Node.js which serves two endpoints ```/api/application``` and ```/api/application/:applicationId```. The application is a REST API that retrieves data from MongoDB data sources. The following technologies are used to develop this application: 
+- Node.js v18.14.0 - Express.js for the REST API server 
+- - Mongodb client modules to read data from DBs 
+- - dotenv to hide sensitive information like ```PORT``` and ```MONGO_CONNECTION_STRING```.
 
 ## Installation
 
