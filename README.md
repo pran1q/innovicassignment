@@ -1,10 +1,12 @@
 # INNOVIC Node.js assignment application
 
-This is a demo application developed on Node.js which serves two endpoints ```/api/application``` and ```/api/application/:applicationId```. The application is a REST API that retrieves data from MongoDB data sources. The following technologies are used to develop this application: 
+This demo application is developed as part of an assignment by [INNOVIC](https://www.innovic.io/) which serves two endpoints ```/api/application``` and ```/api/application/:applicationId```. The application is a REST API that retrieves data from MongoDB data sources. The following technologies are used to develop this application: 
 - Node.js v18.14.0 
 - Express.js for the REST API server 
 - MongoDB client modules to read data from DBs 
 - dotenv to hide sensitive information like ```PORT``` and ```MONGO_CONNECTION_STRING```.
+
+ More details on the assignment can be found [here](https://drive.google.com/file/d/1O29Da5kgF2O1b8pB41b7YmtZVZJ7U4W7/view).
 
 ## Installation
 
@@ -46,7 +48,7 @@ Second endpoint is:
 ```
 GET http://localhost/api/application/:applicationId
 ``` 
-- Returns a single application with the specified applicationId from the apps collection in MongoDB.
+- Returns a single application with the specified ```applicationId``` from the apps collection in MongoDB.
 Applications with ```enabled = true``` and ```deleted = false``` status will be included in the response. The response for GET ```http://localhost/api/application``` will include the following attributes:
 ```
  - _id (e.g. "582457b6016eaa9d3aee09fb")
